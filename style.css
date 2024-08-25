@@ -319,6 +319,25 @@ span {
   margin: 2rem 0 3rem;
 }
 
+.btn1{
+  width: 250px;
+  height: 65px;
+  font-size: 26px;
+  font-weight: bold;
+  border: none;
+  margin: 10% 0% 0% 4%;
+  background:var(--main-color);
+  /* background-color: #000; */
+  color: var(--bg-color);
+  transition: all ease 0.5s;
+  border-radius: 3rem;
+}
+.btn1:hover{
+  -webkit-box-reflect: below 1px linear-gradient(transparent,var(--bg-color));
+  box-shadow: 0 0 5px var(--main-color),0 0 5px var(--main-color),0 0 5px var(--main-color),0 0 5px var(--main-color);
+  cursor: pointer;
+}
+
 /* Services-Section-Design */
 
 .services h2 {
