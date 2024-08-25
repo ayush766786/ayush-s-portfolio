@@ -537,9 +537,16 @@ span {
   section{
     padding: 10rem 3% 2rem;
   }
+  .services{
+    padding-bottom: 7rem;
+  }
+  .projects{
+    padding-bottom: 7rem;
+  }
   .footer{
     padding: 2rem 3%;
   }
+
 }
 @media(max-width:767px){
   #menu-icon{
@@ -567,5 +574,101 @@ span {
     margin: 3rem 0;
     text-align: center;
   }
+.home{
+  flex-direction: column-reverse;
+  
+}
+.home-content h3{
+  font-size: 2.6rem;
+}
+.home-contenth1{
+  font-size: 5rem;
+}
+.home-img img{
+  width: 80%;
+  margin-bottom: 4rem;
+}
+.home-content{
+  text-align: center;
+  margin-top: 2rem;
+}
+.center{
+  left: 25%;
+}
+}
+@media(max-width:405px){
+  .center{
+    left: 25%;
+    font-size: 1.6rem;
+  }
+}
+@media(max-width:364px){
+  .center{
+    left: 53%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2rem;
+  }
+}
 
+/* about section breakpoints */
+
+@media(max-width:767px){
+  .about{
+    flex-direction: column;
+  }
+  .about-img img{
+    width: 100%;
+    /* text-align: center; */
+  }
+  .about-content{
+    text-align: center;
+  }
+.services h2{
+  margin-bottom: 3rem;
+}
+}
+
+/* project section breakpoints */
+
+@media(max-width:767px){
+  .project-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2.5rem;
+  }
+  .projects h2{
+    margin-bottom: 3rem;
+  }
+}
+@media(max-width:617px){
+  .project-container{
+   
+    grid-template-columns: 1fr;
+   
+  }
+}
+
+@media(max-width:481px){
+  .contact form .input-box input{
+    width: 100%;
+  }
+}
+@media(max-width:450px){
+  html{
+    font-size: 50%;
+  }
+  
+
+}
+@media(max-width:365px){
+  .footer{
+    flex-direction: column-reverse;
+  }
+  .footer p{
+    text-align: center;
+    margin-top: 2rem;
+  }
 }
