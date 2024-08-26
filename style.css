@@ -145,6 +145,7 @@ span {
  /* box-shadow: 0,0,0,.1rem white; */
  box-shadow: 0 0 1rem var(--main-color);
  border-radius: 5rem;
+ z-index: 100;
 }
 .social-media a {
   display: inline-flex;
