@@ -18,17 +18,19 @@
 
 html {
   font-size: 62.5%;
-  /* overflow: hidden; */
+  /* overflow-y: hidden; */
 }
 
 body {
   background: var(--bg-color);
   color: var(--text-color);
+  
 }
 
 section {
   min-height: 100vh;
   padding: 10rem 9% 2rem;
+  overflow: hidden;
 
 }
 
