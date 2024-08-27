@@ -78,6 +78,6 @@ const typed=new Typed('.multiple-text',{
 VanillaTilt.init(document.querySelectorAll(".services"), {
   max: 10,
   speed: 300,
-  glare:true,
+  // glare:true,
   "max-glare":8
 });
