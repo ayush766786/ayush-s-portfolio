@@ -55,7 +55,7 @@
         target="_blank"></i></a>
     <a href="https://www.linkedin.com/in/ayush004/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
     <a href="https://github.com/ayush766786" target="_blank"><i class="fa-brands fa-github" target="_blank"></i></a>
-
+    <!-- <a href="t.me/AyushMishradeveloper" target="_blank"><i class="fa-brands fa-telegram"></i></a> -->
   </div>
 
 
@@ -189,7 +189,7 @@
       </div>
       <textarea name="Message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
       <input type="submit" value="Send Message" class="btn">
-      
+
     </form>
     <span id="msg"></span>
   </section>
@@ -214,17 +214,17 @@
   <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbyKoXHg1S5OQrj5V-JJxfb8os1tN1tMt4VXslRp--L2J0KoDlGvyoeTq4vnwzJNNOxQNQ/exec'
     const form = document.forms['submit-to-google-sheet']
-    const msg=document.getElementById("msg")
-          
+    const msg = document.getElementById("msg")
+
 
     form.addEventListener('submit', e => {
       e.preventDefault()
       fetch(scriptURL, { method: 'POST', body: new FormData(form) })
         .then(response => {
-          msg.innerHTML="Message set successfully"
-          setTimeout(()=>{
-            msg.innerHTML=""
-          },5000)
+          msg.innerHTML = "Message set successfully"
+          setTimeout(() => {
+            msg.innerHTML = ""
+          }, 5000)
           form.reset()
         })
         .catch(error => console.error('Error!', error.message))
