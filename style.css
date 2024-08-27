@@ -375,6 +375,16 @@ span {
 }
 
 /* Services-Section-Design */
+.services{
+  transition: 0.5s;
+  cursor: pointer;
+}
+.services:hover{
+  border: .1rem solid var(--main-color);
+  margin: 1.8rem;
+  box-shadow: 0 0 1rem var(--main-color);
+  border-radius: 2rem;
+}
 
 .services h2 {
   margin-bottom: 5rem;
@@ -386,7 +396,16 @@ span {
   align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
+  /* transition: 2s ;
+  cursor: pointer; */
+  /* padding: 2rem; */
 }
+/* .services-container:hover{
+  border: .1rem solid var(--main-color);
+  padding: 2rem;
+  border-radius: 2rem;
+  transform: scale(1.02);
+} */
 
 .services-container .services-box {
   flex: 1 1 30rem;
@@ -715,3 +734,4 @@ span {
     margin-top: 2rem;
   }
 }
+

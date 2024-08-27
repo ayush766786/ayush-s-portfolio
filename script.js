@@ -74,3 +74,10 @@ const typed=new Typed('.multiple-text',{
   loop:true
 }
 )
+
+VanillaTilt.init(document.querySelectorAll(".services"), {
+  max: 10,
+  speed: 300,
+  glare:true,
+  "max-glare":8
+});
