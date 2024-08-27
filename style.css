@@ -556,6 +556,16 @@ span {
   color: var(--second-bg-color);
 }
 
+#msg{
+ font-size: 1.6rem;
+ 
+  display: flex;
+  justify-content: center;
+  
+  color: var(--text-color);
+  /* display: block; */
+}
+
 /* BREAKPOINTS */
 @media(max-width:1200px){
   html{

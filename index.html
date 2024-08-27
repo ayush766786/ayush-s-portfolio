@@ -51,11 +51,12 @@
   </section>
 
   <div class="social-media">
-      <a href="https://www.instagram.com/ayushmishra.7/" target="_blank"><i class="fa-brands fa-square-instagram" target="_blank"></i></a>
-      <a href="https://www.linkedin.com/in/ayush004/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://github.com/ayush766786" target="_blank"><i class="fa-brands fa-github" target="_blank"></i></a>
-     
-    </div>
+    <a href="https://www.instagram.com/ayushmishra.7/" target="_blank"><i class="fa-brands fa-square-instagram"
+        target="_blank"></i></a>
+    <a href="https://www.linkedin.com/in/ayush004/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="https://github.com/ayush766786" target="_blank"><i class="fa-brands fa-github" target="_blank"></i></a>
+
+  </div>
 
 
 
@@ -177,19 +178,20 @@
   <!-- Contect-Section-Design -->
   <section class="contact" id="contact">
     <h2 class="heading">Contact <span>Me!</span></h2>
-    <form action="#">
+    <form name="submit-to-google-sheet">
       <div class="input-box">
-        <input type="text" placeholder="Full Name">
-        <input type="text" placeholder="Email Address">
+        <input type="text" name="Name" placeholder="Full Name">
+        <input type="text" name="Email" placeholder="Email Address">
       </div>
       <div class="input-box">
-        <input type="number" placeholder="Mobile Number">
-        <input type="text" placeholder="Email Subject">
+        <input type="number" name="Mobile Number" placeholder="Mobile Number">
+        <input type="text" name="Email Subject" placeholder="Email Subject">
       </div>
-      <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+      <textarea name="Message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
       <input type="submit" value="Send Message" class="btn">
+      
     </form>
-
+    <span id="msg"></span>
   </section>
 
   <!-- footer-design -->
@@ -209,6 +211,25 @@
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
   <script src="script.js"></script>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyKoXHg1S5OQrj5V-JJxfb8os1tN1tMt4VXslRp--L2J0KoDlGvyoeTq4vnwzJNNOxQNQ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById("msg")
+          
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          msg.innerHTML="Message set successfully"
+          setTimeout(()=>{
+            msg.innerHTML=""
+          },5000)
+          form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 
 </html>
