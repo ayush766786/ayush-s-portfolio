@@ -375,16 +375,17 @@ span {
 }
 
 /* Services-Section-Design */
-.services{
+/* .services{
   transition: 0.5s;
   cursor: pointer;
 }
 .services:hover{
   border: .1rem solid var(--main-color);
-  margin: 1.8rem;
+  margin: 10rem 0rem;
   box-shadow: 0 0 1rem var(--main-color);
   border-radius: 2rem;
-}
+} */
+
 
 .services h2 {
   margin-bottom: 5rem;
@@ -396,16 +397,19 @@ span {
   align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
-  /* transition: 2s ;
-  cursor: pointer; */
-  /* padding: 2rem; */
+  transition: transform 5s, border-color 2rem; /* Specify which properties to transition */
+  cursor: pointer;
+  padding: 5rem;
+  border: .1rem solid transparent; /* Account for the border in the normal state */
+  border-radius: 2rem; /* Moved here for consistency */
 }
-/* .services-container:hover{
-  border: .1rem solid var(--main-color);
-  padding: 2rem;
-  border-radius: 2rem;
+
+.services-container:hover {
+  border-color: var(--main-color);
   transform: scale(1.02);
-} */
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
 
 .services-container .services-box {
   flex: 1 1 30rem;

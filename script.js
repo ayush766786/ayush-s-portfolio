@@ -75,9 +75,9 @@ const typed=new Typed('.multiple-text',{
 }
 )
 
-VanillaTilt.init(document.querySelectorAll(".services"), {
-  max: 10,
-  speed: 300,
+VanillaTilt.init(document.querySelectorAll(".services-container"), {
+  max: 5,
+  speed: 100,
   // glare:true,
-  "max-glare":8
+  "max-glare":1
 });
