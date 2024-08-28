@@ -375,16 +375,7 @@ span {
 }
 
 /* Services-Section-Design */
-/* .services{
-  transition: 0.5s;
-  cursor: pointer;
-}
-.services:hover{
-  border: .1rem solid var(--main-color);
-  margin: 10rem 0rem;
-  box-shadow: 0 0 1rem var(--main-color);
-  border-radius: 2rem;
-} */
+
 
 
 .services h2 {
@@ -392,6 +383,7 @@ span {
 }
 
 .services-container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -408,7 +400,11 @@ span {
   border-color: var(--main-color);
   transform: scale(1.02);
   box-shadow: 0 0 1rem var(--main-color);
+  /* background: rgba(0, 128, 255, 0.3); */
+  /* background:var(--main-color); */
 }
+
+
 
 
 .services-container .services-box {

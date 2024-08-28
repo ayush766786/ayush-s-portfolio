@@ -75,7 +75,7 @@ const typed=new Typed('.multiple-text',{
 }
 )
 
-VanillaTilt.init(document.querySelectorAll(".services-container"), {
+VanillaTilt.init(document.querySelectorAll(".services-container,.project-box"), {
   max: 5,
   speed: 100,
   // glare:true,
