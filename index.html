@@ -178,7 +178,9 @@
   <!-- Contect-Section-Design -->
   <section class="contact" id="contact">
     <h2 class="heading">Contact <span>Me!</span></h2>
-    <form name="submit-to-google-sheet">
+    <form id="myForm" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="00c4b2c9-8150-4032-8422-e05612b74162">
+
       <div class="input-box">
         <input type="text" name="Name" placeholder="Full Name" required>
         <input type="text" name="Email" placeholder="Email Address" required>
@@ -209,7 +211,7 @@
 
   <!-- vanilal js -->
   <script type="text/javascript" src="vanilla-tilt.js"></script>
-  
+
   <!-- typed js -->
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
@@ -217,23 +219,33 @@
   <script src="script.js"></script>
 
   <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyKoXHg1S5OQrj5V-JJxfb8os1tN1tMt4VXslRp--L2J0KoDlGvyoeTq4vnwzJNNOxQNQ/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
+    
 
+    const form = document.getElementById('myForm');
 
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => {
-          msg.innerHTML = "Message set successfully"
-          setTimeout(() => {
-            msg.innerHTML = ""
-          }, 5000)
-          form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
+form.addEventListener('submit', async function(event) {
+    event.preventDefault(); // Form ko reload hone se rokta hai
+
+    // Form data ko send karna
+    try {
+        const formData = new FormData(form);
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData
+        });
+
+        if (response.ok) {
+            alert("Form successfully submitted!");
+            form.reset(); // Form ko reset karna
+        } else {
+            alert("There was an issue with submission.");
+        }
+    } catch (error) {
+        alert("An error occurred.");
+        console.error(error);
+    }
+});
+
   </script>
 </body>
 
